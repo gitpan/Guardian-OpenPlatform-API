@@ -1,0 +1,6 @@
+Revision history for Perl extension Guardian::OpenPlatform::API.
+
+0.01  Wed Mar 11 11:53:59 2009
+	- original version; created by h2xs 1.23 with options
+		-X Guardian::OpenPlatform::API
+
