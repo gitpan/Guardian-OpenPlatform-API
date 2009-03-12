@@ -4,5 +4,7 @@ Build.PL
 MANIFEST
 README
 t/01-basic.t
+t/02-pod.t
+t/03-pod_coverage.t
 lib/Guardian/OpenPlatform/API.pm
 META.yml

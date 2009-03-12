@@ -1,6 +1,60 @@
-Revision history for Perl extension Guardian::OpenPlatform::API.
+2009-03-12  Dave Cross  <dave@dave.org.uk>
 
-0.01  Wed Mar 11 11:53:59 2009
-	- original version; created by h2xs 1.23 with options
-		-X Guardian::OpenPlatform::API
+	* Build.PL: Bump version number.
+
+	* commit e323586ec82beb042c37fe2364948ad65638227c
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* t/02-pod.t, t/03-pod_coverage.t: Added pod tests
+
+	* commit 246399657a05603dcd65c03a82c805cf3c7dbfce
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Use strict and warnings
+	(for Kwalitee)
+
+	* commit 39428541eabbfcb4aaf4216e9c29810078775742
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Refactored to allow support
+	of other query methods.
+
+	* commit cd58cc30f3d6cf155d5d2e5a3836e2f7f747e7f6
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL: Require Perl 5.8.1 (as that's what Moose needs).
+
+	* commit c047deef90d2452469bf45e83cd60607f5f0977c
+
+2009-03-11  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL, MANIFEST, README: Various admin tweaks.
+
+	* commit 5cf8de343430ccadac45d380d76181bb4460ca15
+
+2009-03-11  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm, t/00-load.t, t/01-basic.t:
+	More tests and basic code to pass them. Now actually does
+	something useful.
+
+	* commit b6b2473c9ac8e855c32bb9c8c3ef7634624e8849
+
+2009-03-11  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm, t/00-load.t: Tests for basic
+	object construction, together with code that passes them.
+
+	* commit 129112e018407c6ca079900fe4cf121f98f5d01c
+
+2009-03-11  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL, Changes, MANIFEST, README,
+	lib/Guardian/OpenPlatform/API.pm, t/00-load.t: Initial commit.
+
+	* commit 078bc1afee74ee5cda1a190fe7de5a13adc960b3
 

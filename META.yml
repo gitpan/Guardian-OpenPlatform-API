@@ -1,6 +1,6 @@
 ---
 name: Guardian-OpenPlatform-API
-version: 0.01
+version: 0.02
 author:
   - 'Dave Cross, E<lt>dave@mag-sol.comE<gt>'
 abstract: Access the Guardian OpenPlatform API
@@ -10,7 +10,7 @@ resources:
 requires:
   LWP::UserAgent: 2.023
   Moose: 0
-  perl: 5.006
+  perl: 5.008001
 build_requires:
   Test::More: 0.47
 provides:

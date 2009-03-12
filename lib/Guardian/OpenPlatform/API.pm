@@ -26,6 +26,8 @@ get a key from the OpenPlatform web site.
 
 package Guardian::OpenPlatform::API;
 
+use strict;
+use warnings;
 use 5.006000;
 
 use Moose;
@@ -52,12 +54,6 @@ has 'format' => (
     isa => 'Str',
     default => 'json',
     );
-
-sub BUILD {
-    my $self = shift;
-
-    $self->{ua} = LWP::UserAgent->new;
-}
 
 =head1 METHODS
 
@@ -110,7 +106,31 @@ This method returns an HTTP::Response object.
 
 =cut
 
+my %dispatch = (
+    search => \&search,
+);
+
 sub content {
+    my $self = shift;
+
+    my $args = shift;
+
+    my $mode = $args->{mode} || 'search';
+
+    croak "Invalid mode '$mode'" unless exists $dispatch{$mode};
+
+    my $method = $dispatch{$mode};
+
+    $self->$method($args);
+}
+
+=head2 search({ qry => $query, [ filter => $filter, format => $fmt ] });
+
+Currently does the same as C<content>. Will get more complex though.
+
+=cut
+
+sub search {
     my $self = shift;
 
     my $args = shift;
@@ -135,6 +155,18 @@ sub content {
     $url .= '&api_key=' . $self->api_key;
 
     my $resp = $self->{ua}->get($url);
+}
+
+=head2 BUILD
+
+Standard Moose BUILD method. You shouldn't need to call this.
+
+=cut
+
+sub BUILD {
+    my $self = shift;
+
+    $self->{ua} = LWP::UserAgent->new;
 }
 
 =head1 TODO
