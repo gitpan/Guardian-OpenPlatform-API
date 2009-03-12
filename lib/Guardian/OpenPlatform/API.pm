@@ -34,7 +34,7 @@ use Moose;
 use LWP;
 use Carp;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 my $base_url = 'http://api.guardianapis.com/';
 
@@ -212,7 +212,7 @@ email:
 
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Guardian::OpenPlatform::API>
 
-bug-www-shorten@rt.cpan.org
+bug-guardian-openplatform-api@rt.cpan.org
 
 This makes it much easier for me to track things and thus means your problem
 is less likely to be neglected.
