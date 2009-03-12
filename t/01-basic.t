@@ -3,7 +3,7 @@ use Test::More;
 BEGIN {
 
   if ($ENV{GUARDIAN_API_KEY}) {
-    plan tests => 14;
+    plan tests => 18;
   } else {
     plan skip_all => 'Please set environment variable GUARDIAN_API_KEY';
   }
@@ -40,3 +40,13 @@ isa_ok($resp, 'HTTP::Response');
 ok($resp->is_success, 'Successful request');
 is($resp->header('Content-type'), 'text/xml; charset=UTF-8',
    'Correct type - xml');
+
+$resp = $client->content({
+  mode => 'tags',
+});
+
+ok($resp, 'Got a response');
+isa_ok($resp, 'HTTP::Response');
+ok($resp->is_success, 'Successful request');
+is($resp->header('Content-type'), 'application/json; charset=UTF-8',
+   'Correct type - json');

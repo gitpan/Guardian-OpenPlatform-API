@@ -1,5 +1,44 @@
 2009-03-12  Dave Cross  <dave@dave.org.uk>
 
+	* Changes: Removed Changes file from version control.
+
+	* commit 63914421e6349087c9afd3bfcd83dafef489c634
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL, Changes: Bumped _other_ version number.
+
+	* commit 7c710633c12b55f448f39517887fc8d2e8307e3b
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Bumped version number.
+
+	* commit ef3d0e6101ebf3d1c6da95f408a00ccc28e8ae9b
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm, t/01-basic.t: Added support
+	for the 'tags' call.
+
+	* commit 272475a4d129867be8571ced80ef8076e944f199
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Oops. Forgot to bump version
+	number.
+
+	* commit 0fac879bf3462b35ddc4656ee3babbd2e2fcd756
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* Changes, MANIFEST, lib/Guardian/OpenPlatform/API.pm: Changed
+	MANIFEST to add new test files. Changes to pass pod tests.
+
+	* commit 449be1a4ad593128f88bc451d216e0b663de59f1
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
 	* Build.PL: Bump version number.
 
 	* commit e323586ec82beb042c37fe2364948ad65638227c

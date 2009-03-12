@@ -34,7 +34,7 @@ use Moose;
 use LWP;
 use Carp;
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 my $base_url = 'http://api.guardianapis.com/';
 
@@ -108,6 +108,7 @@ This method returns an HTTP::Response object.
 
 my %dispatch = (
     search => \&search,
+    tags   => \&tags,
 );
 
 sub content {
@@ -151,6 +152,35 @@ sub search {
 
     my $fmt = $args->{format} || $self->format;
     $url .= "&format=$fmt";
+
+    $url .= '&api_key=' . $self->api_key;
+
+    my $resp = $self->{ua}->get($url);
+}
+
+=head2 tags
+
+Returns information about tags.
+
+=cut
+
+sub tags {
+    my $self = shift;
+
+    my $args = shift;
+
+    my $url = $base_url . 'content/tags';
+
+    my $params;
+    if ($args->{qry}) {
+        $url .= "?q=$args->{qry}";
+        $params = 1;
+    }
+
+    my $fmt = $args->{format} || $self->format;
+
+    $url .= $params ? '&' : '?';
+    $url .= "format=$fmt";
 
     $url .= '&api_key=' . $self->api_key;
 
