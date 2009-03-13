@@ -1,3 +1,40 @@
+2009-03-13  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Bumped version number.
+
+	* commit 79779eeb4721c4d62830d2a74259b236051096af
+
+2009-03-13  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL: Removed unnecessary dist_version setting.
+
+	* commit 264a373ea36fa1386fe20e449d2a96bcb0bc3b30
+
+2009-03-13  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Added item method.
+
+	* commit fef44d0db61ccdab153301eebfa79d910f0faa78
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* t/01-basic.t: Added more tests.
+
+	* commit 1c1c96cad654d9328d6d15a8d67523b69ea04fa7
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* lib/Guardian/OpenPlatform/API.pm: Remove repeated text.
+
+	* commit d4376c928172bd1b252c3b862a85a57ddc38e6a2
+
+2009-03-12  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL, lib/Guardian/OpenPlatform/API.pm: Fixed RT email
+	address. Bumped version numbers.
+
+	* commit 56eda331480e87936368ee1e76ad6470d723e6ea
+
 2009-03-12  Dave Cross  <dave@dave.org.uk>
 
 	* Changes: Removed Changes file from version control.

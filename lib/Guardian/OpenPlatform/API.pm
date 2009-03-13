@@ -34,7 +34,7 @@ use Moose;
 use LWP;
 use Carp;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 my $base_url = 'http://api.guardianapis.com/';
 
@@ -109,6 +109,7 @@ This method returns an HTTP::Response object.
 my %dispatch = (
     search => \&search,
     tags   => \&tags,
+    item   => \&item,
 );
 
 sub content {
@@ -187,6 +188,28 @@ sub tags {
     my $resp = $self->{ua}->get($url);
 }
 
+=head2 item
+
+Returns a content item given its id.
+
+=cut
+
+sub item {
+    my $self = shift;
+
+    my $args = shift;
+
+    my $url = $base_url . "content/item/$args->{item}";
+
+    my $fmt = $args->{format} || $self->format;
+
+    $url .= "?format=$fmt";
+
+    $url .= '&api_key=' . $self->api_key;
+
+    my $resp = $self->{ua}->get($url);
+}
+
 =head2 BUILD
 
 Standard Moose BUILD method. You shouldn't need to call this.
@@ -204,8 +227,6 @@ sub BUILD {
 This is really just a simple proof of concept. It will get better, I promise.
 
 =head1 BUGS, REQUESTS, COMMENTS
-
-BUGS, REQUESTS, COMMENTS
 
 Support for this module is supplied using the CPAN RT system via the web or 
 email:
